@@ -1,0 +1,5 @@
+[project]
+name = "video-prod-utils"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["opencc-python-reimplemented==0.1.7"]

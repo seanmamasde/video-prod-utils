@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+data/
+models/
+tools/
+out/
+.env
