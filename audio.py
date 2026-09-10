@@ -23,8 +23,6 @@ def main(argv=None):
     with new_output(args.output, (".wav",)) as work:
         command = [args.ffmpeg, "-hide_banner", "-loglevel", "warning", "-nostdin", "-n",
                    "-i", args.input.resolve(), "-map", f"0:a:{args.audio_track}", "-vn"]
-        if args.seconds is not None:
-            command += ["-t", args.seconds]
         # export 48 kHz/24-bit PCM
         run(command + ["-af", ",".join(filters), "-ar", "48000", "-c:a", "pcm_s24le", "-rf64", "auto", work])
 
